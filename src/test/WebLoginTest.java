@@ -4,17 +4,16 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-//import net.sourceforge.jwebunit.exception.TestingEngineResponseException;
-import net.sourceforge.jwebunit.*;
-import net.sourceforge.jwebunit.exception.*;
-//import net.sourceforge.jwebunit.exception.TestingEngineResponseException;
-import net.sourceforge.jwebunit.junit.WebTester;
 
-public class WebLoginTest extends WebTester{
+import static net.sourceforge.jwebunit.junit.JWebUnit.*;
+import net.sourceforge.jwebunit.exception.TestingEngineResponseException;
+
+
+public class WebLoginTest {
 	
 	@Before
-	public void setUp() throws Exception {
-		 setBaseUrl("http://localhost:8080/WebLogin");
+	public void setUp() throws Exception {	
+		 setBaseUrl("http://localhost:52089/AMS/");
 	}
 
 	@After
@@ -23,14 +22,12 @@ public class WebLoginTest extends WebTester{
 	}
 
 	@Test
-	public void testLoginOK() throws TestingEngineRegistryException {
+	public void testLoginOK() throws TestingEngineResponseException {
 		 beginAt("/index.jsp");
-		 assertTitleEquals("Login Page");
-	     setTextField("username", "Rosy");
-	     setTextField("password", "p@ssw0rd");
+		 assertTitleEquals("Struts 2 - Login Application");
+	     setTextField("username", "admin1");
+	     setTextField("password", "admin");
 	     submit();
-	     assertTitleEquals("User Logged Successfully");
+	     assertTitleEquals("Welcome");
 	}
-	
-
 }
