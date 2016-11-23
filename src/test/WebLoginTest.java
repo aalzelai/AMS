@@ -3,10 +3,14 @@ package test;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.*;
-import org.apache.catalina.webresources.*;
 
-public class WebLoginTest {
+//import net.sourceforge.jwebunit.exception.TestingEngineResponseException;
+import net.sourceforge.jwebunit.*;
+import net.sourceforge.jwebunit.exception.*;
+//import net.sourceforge.jwebunit.exception.TestingEngineResponseException;
+import net.sourceforge.jwebunit.junit.WebTester;
+
+public class WebLoginTest extends WebTester{
 	
 	@Before
 	public void setUp() throws Exception {
@@ -19,7 +23,7 @@ public class WebLoginTest {
 	}
 
 	@Test
-	public void testLoginOK() throws TestingEngineResponseException {
+	public void testLoginOK() throws TestingEngineRegistryException {
 		 beginAt("/index.jsp");
 		 assertTitleEquals("Login Page");
 	     setTextField("username", "Rosy");
