@@ -14,7 +14,6 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/JwebUnitTools/commons-codec-1.7.jar"/>
 	<classpathentry kind="lib" path="lib/JwebUnitTools/commons-collections-3.2.1.jar"/>
 	<classpathentry kind="lib" path="lib/JwebUnitTools/commons-io-2.4.jar"/>
