@@ -4,3 +4,11 @@ jdk:
 install: 
     - ant clean
     - ant build
+ 
+deploy:
+  provider: releases
+  api_key: scKFuytwDLrfjxqHQRqs 
+  skip_cleanup: true
+  on:
+    tags: true 
+ 

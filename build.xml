@@ -146,10 +146,10 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="test">
+              	<!-- <target name="test">
     <echo>Here would come the test</echo>
-    </target>
-    <!--<target name="test">
+    </target>-->
+    <target name="test">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -166,21 +166,4 @@
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
-  	<target name="warTarget">
-  	    <war destfile="AMS.war" warfile="AMS.war" needxmlfile='false'>
-  	    	<fileset dir="build/classes"></fileset>
-  	    </war>	
-  		<antcall target="deployTarget"/>
-  	</target>          	
-    <target name="deployTarget">
-    	<copy file="${AMS_HOME}/AMS.war" todir="${tomcat.deployment}"/>
-   		<antcall target="startTomcat"/>
-    </target>
-    <target name="startTomcat">
-    	<exec executable="${AMS_HOME}/define_CAT_HOME.bat"/>
-    	<exec executable="${tomcat.bin}/startup.bat"/>
-    </target>
-  	<target name="stopTomcat">
-  	    	<exec executable="${tomcat.bin}/shutdown.bat"/>
-    </target>-->
 </project>
