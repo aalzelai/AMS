@@ -13,7 +13,7 @@ public class WebLoginTest {
 	
 	@Before
 	public void setUp() throws Exception {	
-		 setBaseUrl("http://localhost:52089/AMS/");
+		 setBaseUrl("http://localhost:9678/AMS/");
 	}
 
 	@After
